@@ -14,6 +14,9 @@
 		ED53DC682A7FD3E90083B8EE /* ToDoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED53DC662A7FD3E90083B8EE /* ToDoApp.xcdatamodeld */; };
 		ED53DC6A2A7FD3EA0083B8EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED53DC692A7FD3EA0083B8EE /* Assets.xcassets */; };
 		ED53DC6D2A7FD3EA0083B8EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED53DC6B2A7FD3EA0083B8EE /* LaunchScreen.storyboard */; };
+		ED53DC762A7FD4030083B8EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED53DC752A7FD4030083B8EE /* SnapKit */; };
+		ED53DC782A7FD43E0083B8EE /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED53DC772A7FD43E0083B8EE /* TaskTableViewCell.swift */; };
+		ED53DC7A2A7FD4510083B8EE /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED53DC792A7FD4510083B8EE /* TaskModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,8 @@
 		ED53DC692A7FD3EA0083B8EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED53DC6C2A7FD3EA0083B8EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED53DC6E2A7FD3EA0083B8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED53DC772A7FD43E0083B8EE /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		ED53DC792A7FD4510083B8EE /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +38,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED53DC762A7FD4030083B8EE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED4478002A7FD70800B7B7E2 /* ToDoListItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ToDoListItem;
+			sourceTree = "<group>";
+		};
 		ED53DC512A7FD3E90083B8EE = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +71,43 @@
 		ED53DC5C2A7FD3E90083B8EE /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED4478002A7FD70800B7B7E2 /* ToDoListItem */,
 				ED53DC5D2A7FD3E90083B8EE /* AppDelegate.swift */,
 				ED53DC5F2A7FD3E90083B8EE /* SceneDelegate.swift */,
-				ED53DC612A7FD3E90083B8EE /* ViewController.swift */,
-				ED53DC632A7FD3E90083B8EE /* Main.storyboard */,
+				ED53DC7B2A7FD45B0083B8EE /* Model */,
+				ED53DC7D2A7FD46C0083B8EE /* View */,
+				ED53DC7C2A7FD4640083B8EE /* Controller */,
 				ED53DC692A7FD3EA0083B8EE /* Assets.xcassets */,
 				ED53DC6B2A7FD3EA0083B8EE /* LaunchScreen.storyboard */,
 				ED53DC6E2A7FD3EA0083B8EE /* Info.plist */,
 				ED53DC662A7FD3E90083B8EE /* ToDoApp.xcdatamodeld */,
 			);
 			path = ToDoApp;
+			sourceTree = "<group>";
+		};
+		ED53DC7B2A7FD45B0083B8EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED53DC792A7FD4510083B8EE /* TaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED53DC7C2A7FD4640083B8EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED53DC612A7FD3E90083B8EE /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED53DC7D2A7FD46C0083B8EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED53DC772A7FD43E0083B8EE /* TaskTableViewCell.swift */,
+				ED53DC632A7FD3E90083B8EE /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +126,9 @@
 			dependencies = (
 			);
 			name = ToDoApp;
+			packageProductDependencies = (
+				ED53DC752A7FD4030083B8EE /* SnapKit */,
+			);
 			productName = ToDoApp;
 			productReference = ED53DC5A2A7FD3E90083B8EE /* ToDoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +157,9 @@
 				Base,
 			);
 			mainGroup = ED53DC512A7FD3E90083B8EE;
+			packageReferences = (
+				ED53DC742A7FD4030083B8EE /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = ED53DC5B2A7FD3E90083B8EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED53DC622A7FD3E90083B8EE /* ViewController.swift in Sources */,
+				ED53DC7A2A7FD4510083B8EE /* TaskModel.swift in Sources */,
 				ED53DC5E2A7FD3E90083B8EE /* AppDelegate.swift in Sources */,
+				ED53DC782A7FD43E0083B8EE /* TaskTableViewCell.swift in Sources */,
 				ED53DC602A7FD3E90083B8EE /* SceneDelegate.swift in Sources */,
 				ED53DC682A7FD3E90083B8EE /* ToDoApp.xcdatamodeld in Sources */,
 			);
@@ -362,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED53DC742A7FD4030083B8EE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED53DC752A7FD4030083B8EE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED53DC742A7FD4030083B8EE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ED53DC662A7FD3E90083B8EE /* ToDoApp.xcdatamodeld */ = {
